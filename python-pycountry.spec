@@ -4,8 +4,7 @@
 
 %global prjname pycountry
 %global prjown  flyingcircus
-%global commit0 df292645237a10e5586649f11b0940af0174bd77
-%global shortcommit0 %(c=%{commit0}; echo ${c:0:12})
+%global shortcommit0 658386a36300
 
 %if 0%{?fedora}
 %bcond_without python3
@@ -14,9 +13,9 @@
 %endif
 
 Name:           python-%{prjname}
-Version:        1.20
+Version:        17.9.23
 Release:        1%{?dist}
-Summary:        ISO country, subdivision, language, currency and script definitions and their translations
+Summary:        ISO databases for the standards
 
 License:        LGPLv2
 URL:            https://pypi.python.org/pypi/%{prjname}/
@@ -44,7 +43,8 @@ pycountry provides the ISO databases for the standards:
 15924
     Scripts
 
-The package includes a copy from Debian’s pkg-isocodes and makes the data accessible through a Python API.
+The package includes a copy from Debian’s pkg-isocodes and makes the
+data accessible through a Python API.
 
 Translation files for the various strings are included as well.
 
@@ -122,5 +122,9 @@ popd
 
 
 %changelog
+* Sat Sep 23 2017 James Davidson <james@greycastle.net> - 17.9.23-1
+- Update to upstream release 17.9.23
+- Fix rpmlint issues
+
 * Sun Aug 28 2016 James Davidson <james@greycastle.net>
 - Initial packaging
